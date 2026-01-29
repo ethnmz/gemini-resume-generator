@@ -1,0 +1,36 @@
+\textbf{\Large Your Name}
+
+Email: your.email@example.com | Phone: (123) 456-7890 | LinkedIn: linkedin.com/in/yourprofile | GitHub: github.com/yourusername
+
+\section*{Education}
+\textbf{University Name} \hfill City, State
+
+Degree in Major \hfill Graduation Date
+
+GPA: 3.XX/4.0
+
+\section*{Experience}
+\textbf{Job Title} \hfill Start Date -- End Date
+
+\textit{Company Name} \hfill City, State
+
+\begin{itemize}
+    \item Accomplished X by doing Y resulting in Z
+    \item Led development of feature that improved metric by XX\%
+    \item Collaborated with team to deliver project ahead of schedule
+\end{itemize}
+
+\section*{Projects}
+\textbf{Project Name}
+
+\begin{itemize}
+    \item Description of what you built and technologies used
+    \item Impact or results of the project
+\end{itemize}
+
+\section*{Skills}
+\textbf{Languages:} Python, JavaScript, Java
+
+\textbf{Technologies:} React, Node.js, Docker, AWS
+
+\textbf{Tools:} Git, VS Code, Jira
