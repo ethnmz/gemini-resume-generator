@@ -44,7 +44,7 @@ pip install -r requirements.txt
 API_KEY = "YOUR_API_KEY_HERE"
 ```
 
-⚠️ **Security Note**: Never commit your API key to version control. Consider using environment variables:
+ **Security Note**: Never commit your API key to version control. Consider using environment variables:
 ```python
 import os
 API_KEY = os.getenv("GEMINI_API_KEY")
@@ -108,26 +108,7 @@ The generator follows these strict rules for clean, ATS-friendly formatting:
 - 0.75-inch margins
 - Professional, minimal styling
 
-## Troubleshooting
 
-**"Model did not return LaTeX" error**
-- The AI response didn't contain valid LaTeX. Try running again or adjust the prompt.
-
-**pdflatex command not found**
-- Make sure LaTeX is installed and in your PATH
-- Update the pdflatex path in the script if needed
-
-**API key errors**
-- Verify your Gemini API key is correct
-- Check your API quota and billing settings
-
-## Contributing
-
-Contributions are welcome! Feel free to open issues or submit pull requests.
-
-## License
-
-MIT License - feel free to use this project for personal or commercial purposes.
 
 ## Acknowledgments
 
