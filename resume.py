@@ -4,12 +4,13 @@
 
 import google.genai as genai
 import subprocess
+import sys
 from pathlib import Path
 
 # -----------------------------
 # Configuration
 # -----------------------------
-API_KEY = "AIzaSyCbBikPtFQt31n_xOZFNAsVrURwzadqO0M" # Replace this string with your api key
+API_KEY = "YOUR_API_KEY_HERE" # Replace this string with your api key
 RESUME_TEXT_FILE = "ResumeText"  # plain text resume input in LaTeX format
 OUTPUT_TEX = "resume.tex" # outputs the LaTeX format
 OUTPUT_PDF = "resume.pdf" # Converts resume.tex into proper Resume format
@@ -33,7 +34,6 @@ resume_text = Path(RESUME_TEXT_FILE).read_text(encoding="utf-8")
 # -----------------------------
 # Input job description at this step
 # -----------------------------
-import sys
 print("Enter Job Description (type END on its own line):", flush=True)
 sys.stdout.flush()
 job_description = []
@@ -108,11 +108,18 @@ Path(OUTPUT_TEX).write_text(latex_code, encoding="utf-8")
 print("LaTeX generated: resume.tex", flush=True)
 
 # -----------------------------
-# Compile and run MiKTeX automatically
+# Compile LaTeX to PDF automatically
 # -----------------------------
-subprocess.run(
-    ["/Library/TeX/texbin/pdflatex", "-interaction=nonstopmode", OUTPUT_TEX],
-    check=True
-)
+try:
+    subprocess.run(
+        ["pdflatex", "-interaction=nonstopmode", OUTPUT_TEX],
+        check=True
+    )
+except subprocess.CalledProcessError as e:
+    print(f"Error: LaTeX compilation failed. Make sure pdflatex is installed and in your PATH.", flush=True)
+    raise
+except FileNotFoundError:
+    print("Error: pdflatex command not found. Please install a LaTeX distribution.", flush=True)
+    raise
 
 print("Final PDF generated: resume.pdf", flush=True)

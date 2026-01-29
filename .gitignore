@@ -36,10 +36,6 @@ env/
 *.pdf
 *.tex
 
-# Generated files
-resume.tex
-resume.pdf
-
 # IDE
 .vscode/
 .idea/
