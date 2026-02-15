@@ -4,12 +4,12 @@ An AI-powered resume generator that uses Google's Gemini AI to optimize your res
 
 ## Features
 
-- 🤖 Uses Google Gemini AI (gemini-2.5-flash model) to optimize resume content
-- 📝 Accepts resume input in LaTeX format for precise formatting control
-- 🎯 Tailors bullet points and content to match specific job descriptions
-- 📄 Automatically generates PDF output using pdflatex
-- ⚡ Simple command-line interface
-- 📋 Maintains 2-page maximum resume length
+- Uses Google Gemini AI (gemini-2.5-flash model) to optimize resume content
+- Accepts resume input in LaTeX format for precise formatting control
+- Tailors bullet points and content to match specific job descriptions
+- Automatically generates PDF output using pdflatex
+- Simple command-line interface
+- Maintains 2-page maximum resume length
 
 ## Prerequisites
 
